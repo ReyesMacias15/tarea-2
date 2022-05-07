@@ -23,11 +23,11 @@ function buscarSalaPorId(id) // Función para buscar las salas por id.
 
 (async function main(){ // creamos funcion async/await.
     try{// Lo utilizamos para crear un bloque de instrucciones a intentar.
-        const local = await buscarLocalPorId(1); //utilizamos el await para que se complete una solicitud antes de que pase a la siguiente.
-        const sala = await buscarSalaPorId(local.idsala);
-        local.sala=sala;
-        delete local.idsala; // Lo utilizamos para borrar una propiedad de un objeto.
-        console.log(local); // Imprime la solicitud
+        const sala = await buscarSalaPorId(1); //utilizamos el await para que se complete una solicitud antes de que pase a la siguiente.
+        const local = await buscarLocalPorId(sala.empresa);
+        sala.empresa=local;
+     
+        console.log(sala); // Imprime la solicitud
     }catch(error){// Lo utilizamos para producir una excepción.
         console.log(error.message) // Se utiliza para imprimir los mensajes de error.
     }
