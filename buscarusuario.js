@@ -55,20 +55,30 @@ async function buscarusuario(id){
       delete locals.id;
       return locals;
   }
-
+//  creamos funcion async/await. que usa al main del archivo
   async function main (){
+ // Lo utilizamos para crear un bloque de instrucciones a intentar.
     try{
+//utilizamos el await para que se complete una solicitud antes de que pase a la siguiente
 const user =await buscarusuario(2);
+//buscamos el tipo de usuario con el id que nos retorna la solicitud
 const tipos= await buscartipo(user.tipo);
+//Buscamos si es administrador de algun negocio
 const restaurantes= await buscarLocal(user.empresa);
+//guardamos en un solo arreglo
 user.empresa=restaurantes;
+//guardamos el tipo de usuario eel arreglo usuario
 user.tipo=tipos;
+//guardamos el tipo de usuario el arreglo usuario
 delete user.empresas;
+//mostramos el arreglo completo del usuario
     console.log(user)
+    //caso de que sea error envimao el erro al catch
     }catch(error){
+//Mostramos el mensaje de error correspondiente
 console.log(error.message)
     }
 
 }
-
+//inicializamos el main del archivo
   main();
