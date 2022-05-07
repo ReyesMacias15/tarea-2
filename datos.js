@@ -80,3 +80,6 @@ const reserva = [{
     },
 
 ]
+
+
+module.exports =usuario ;
