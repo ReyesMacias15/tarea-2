@@ -8,7 +8,7 @@ function buscarLocalPorId(id) // Función para buscar las locales por id.
         error.message = `El local con id ${id} no pudo ser encontrado`;// Mensaje de error que presenta al no encontrar una id que este en el arreglo locales.
         throw error; // Lanza exepción del usuario.
     }
-    return local; // Finaliza la ejecución y devuelve un valor especifico a quien llama la función.
+    return local; // Finaliza la ejecución y devuelve un valor especifico a quien llama la función. 
 }
 function buscarSalaPorId(id) // Función para buscar las salas por id.
 {

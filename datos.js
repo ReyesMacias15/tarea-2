@@ -6,7 +6,8 @@ const usuario = [{
     celular: '0961553152',
     correo: 'jjrm1351828189@gmail.com',
     contraseña: 'javierrm0215',
-    empresa: 0,
+    empresa: 1,
+    tipo:1,
 },
 
 {
@@ -16,10 +17,30 @@ const usuario = [{
     correo: 'yandryjoel1234@gmail.com',
     contraseña: 'yandry2020',
     empresa: 1,
+    tipo:2,
 },
 
 ]
 
+
+// arreglo que tiene a los tipos de usuario que maneja  la apliacion
+const tipo_usuario = [{
+    id:1,
+    nombre: 'Cliente normal',
+    
+},
+
+{
+    id:2,
+    nombre: 'Cliente administrador',
+    
+},
+{
+    id:3,
+    nombre: 'Super administrador',
+    
+},
+]
 //arreglo de los locales registrado y que imparten sus servicios en la aplicacion 
 const locales = [{
     id:1,
@@ -130,4 +151,4 @@ const reserva = [{
 ]
 
 
-module.exports ={locales, salas};
+module.exports ={usuario,locales,reserva,salas,tipo_usuario};
